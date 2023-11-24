@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SERVICE</title>
+    <link rel="stylesheet" href="style3.css">
+    
+</head>
+<body>
+
+    <div class="wrapper">
+        <header>
+            <a href="2ndpage.html"><img src="XTIV.png" alt="XTIVITY_LOGO" height="150"></a>
+
+            <nav>
+                <ul>
+                    <li><a href="2ndpage.html">Home</a></li>
+                    <li><a href="3rdpage.html">Service</a></li>
+                    <li><a href="4thpage.html">Contacts</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <div class="left-col">
+                <h1></h1>
+                <p class="subhead">Enter the duration of your stay (in hours):</p>
+                <br>
+                <div class="updates">  <p>Enter the duration of your stay:</p>
+
+                    <form id="bookingForm">
+                        <label for="duration">Duration:</label>
+                        <select id="duration" name="duration">
+                            <option value="1">1 hour</option>
+                            <option value="2">2 hours</option>
+                            <option value="4">4 hours</option>
+                            <option value="8">8 hours</option>
+                            <option value="24">Full day</option>
+                        </select>
+                    </form>
+                    <div class="payment">
+                        <p>Choose a payment method:</p>
+                        <form">
+                            <input type="radio" id="cash" name="payment" value="cash" required>
+                            <label for="cash">Cash</label><br>
+                
+                            <input type="radio" id="gcash" name="payment" value="gcash">
+                            <label for="gcash">GCash</label><br>
+                        </form>
+                
+                        <p>Total Cost: <span id="totalCost">50</span> PHP</p>
+
+                        <button type="submit">Submit</button>
+                    </div>
+                </div>
+
+            </div>
+            <div class="right-col">
+                <div class="image">
+                    <a href="interior.jpg"><img src="interior.jpg" alt="picture of the place" height="320"></a>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script>
+
+        // Function to calculate and update the total cost
+        document.getElementById("duration").addEventListener("change", function () {
+            var selectedDuration = parseInt(this.value);
+            var costPerHour = 50;
+            var totalCost;
+
+            if (selectedDuration === 24) {
+                // Full day option
+                totalCost = 300;
+            } else {
+                totalCost = selectedDuration * costPerHour;
+            }
+
+            document.getElementById("totalCost").textContent = totalCost;
+        });
+    </script>
+</body>
+</html>

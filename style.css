@@ -1,0 +1,41 @@
+body {
+    background-color: #f1e2da;
+    margin: 0;
+    font-family: 'Georgia';
+    max-width: 600px;
+    margin: 0 auto;
+    background-image: url(bg.png);
+    background-position: center;
+    background-repeat: no-repeat; 
+    background-attachment: fixed; 
+    background-size: 100%;
+    color: #1f4659;
+    margin-top: 10em;
+}
+
+h1{
+    border: 1px solid black;
+    border-radius: 1.9em;
+    padding: 1em 2em;
+    background-color:white;
+    text-align: center;
+    border-radius: 1.9em;
+    padding: 0.1em 1em;
+    background-size: 50%;
+}
+
+fieldset{
+    border: 1px solid black;
+    border-radius: 1.9em;
+    padding: 1em 2em;
+    margin: 0 auto;
+    background-color:  #E8E4C9;
+    background-position: center;
+    background-repeat: no-repeat; 
+    background-attachment: fixed; 
+    background-size: 100%;
+}
+
+label{
+    background-color: #f1e2da;
+}
